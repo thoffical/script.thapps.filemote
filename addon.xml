@@ -1,0 +1,14 @@
+<addon id="script.thapps.filemote" version="0.1.0" name="FileMote" provider-name="idealkooks">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0" />
+    </requires>
+    <extension point="xbmc.python.script" library="default.py" />
+    <extension point="xbmc.addon.metadata">
+        <summary>Manage your files remotely</summary>
+        <description>FileMote allows you to manage files on Android, macOS, Linux, and Windows remotely.</description>
+        <platform>all</platform>
+        <language>en</language>
+        <version>21.0</version>
+        <license>Apache License 2.0</license>
+    </extension>
+</addon>
