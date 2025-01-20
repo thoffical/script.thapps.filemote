@@ -6,6 +6,7 @@
     <extension point="xbmc.addon.metadata">
         <summary>Manage your files remotely</summary>
         <description>FileMote allows you to manage files on Android, macOS, Linux, and Windows remotely.</description>
+        <disclaimer>The developer is not responsible for IP leaks. Use with caution.</disclaimer>      
         <platform>all</platform>
         <language>en</language>
         <version>21.1</version>
