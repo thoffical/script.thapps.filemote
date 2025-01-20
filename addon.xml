@@ -9,6 +9,6 @@
         <platform>all</platform>
         <language>en</language>
         <version>21.1</version>
-        <license>Acaphe License 2.0</license>
+        <license>Apache License 2.0</license>
     </extension>
 </addon>
