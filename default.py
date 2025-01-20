@@ -9,7 +9,6 @@ class FileMote:
         self.addon = xbmcaddon.Addon(id='script.thapps.filemote')
         self.user_ip = self.addon.getSetting('user_ip')
         
-        # Check if user_ip is set
         if not self.user_ip:
             xbmcgui.Dialog().ok("Error", "Please set the User IP Address in the addon settings.")
             return
@@ -32,23 +31,29 @@ class FileMote:
         try:
             host, port = address.split(':')
             port = int(port)
+        except ValueError:
+            xbmcgui.Dialog().notification("Error", "Invalid IP address format. Please use IP:Port.", xbmcgui.NOTIFICATION_ERROR, 5000)
+            return
 
+        try:
             with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
-                sock.settimeout(5)  # Set a timeout of 5 seconds
+                sock.settimeout(5)
                 sock.connect((host, port))
                 command = json.dumps({"action": "list_files"})
                 sock.sendall(command.encode('utf-8'))
 
                 response = sock.recv(4096)
                 self.handle_server_response(response.decode('utf-8'))
-        except Exception as e:
-            xbmcgui.Dialog().notification("Error", str(e), xbmcgui.NOTIFICATION_ERROR, 5000)
+        except socket.timeout:
+            xbmcgui.Dialog().notification("Error", "Connection timed out. Please check the server address.", xbmcgui.NOTIFICATION_ERROR, 5000)
+        except socket.error as e:
+            xbmcgui.Dialog().notification("Error", f"Socket error: {str(e)}", xbmcgui.NOTIFICATION_ERROR, 5000)
 
     def handle_server_response(self, response):
         try:
             data = json.loads(response)
             if isinstance(data, list):
-                file_list = "\n".join(data)  # Assuming the response is a list of files
+                file_list = "\n".join(data)
                 xbmcgui.Dialog().ok("Server Response", f"Files:\n{file_list}")
             else:
                 xbmcgui.Dialog().notification("Error", "Unexpected response format.", xbmcgui.NOTIFICATION_ERROR, 5000)
