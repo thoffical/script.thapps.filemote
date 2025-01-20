@@ -1,6 +1,6 @@
 # FileMote
 
-FileMote is a Kodi addon that allows users to manage files remotely on various platforms, including Android, macOS, Linux, and Windows. With a simple and intuitive interface, FileMote enables users to connect to their devices and perform file management tasks seamlessly.
+FileMote is a Kodi addon that allows users to manage files remotely on various platforms, including Android, macOS, Linux, and Windows (does not allow iOS due to a strict system). With a simple and intuitive interface, FileMote enables users to connect to their devices and perform file management tasks seamlessly.
 
 ## Features
 
