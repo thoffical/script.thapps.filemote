@@ -8,7 +8,7 @@
         <description>FileMote allows you to manage files on Android, macOS, Linux, and Windows remotely.</description>
         <platform>all</platform>
         <language>en</language>
-        <version>21.0</version>
-        <license>Apache License 2.0</license>
+        <version>21.1</version>
+        <license>Acaphe License 2.0</license>
     </extension>
 </addon>
