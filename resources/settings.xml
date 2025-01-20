@@ -1,7 +1,6 @@
 <settings>
     <category id="general" label="General Settings">
         <setting id="user_ip" type="string" label="User IP Address (format: IP:Port)" default="192.168.1.1:8080" required="true" />
-        <setting id="timeout" type="integer" label="Connection Timeout (seconds)" default="5" />
         <setting id="enable_logging" type="bool" label="Enable Logging" default="false" />
     </category>
 </settings>
