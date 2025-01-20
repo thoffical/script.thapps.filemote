@@ -1,6 +1,28 @@
 <settings>
     <category id="general" label="General Settings">
-        <setting id="user_ip" type="string" label="User IP Address (format: IP:Port)" default="192.168.1.1:8080" required="true" />
-        <setting id="enable_logging" type="bool" label="Enable Logging" default="false" />
+        
+        <setting 
+            id="user_ip" 
+            type="string" 
+            label="User IP Address" 
+            default="192.168.1.1" 
+            required="true" 
+            description="Enter the IP address (e.g., 192.168.1.1)." />
+        
+        <setting 
+            id="user_port" 
+            type="number" 
+            label="User Port" 
+            default="8080" 
+            required="true" 
+            description="Enter the port number (e.g., 8080). Only numeric values are allowed." />
+        
+        <setting 
+            id="enable_logging" 
+            type="bool" 
+            label="Enable Logging" 
+            default="false" 
+            description="Enable or disable logging for debugging purposes." />
+        
     </category>
 </settings>
