@@ -1,4 +1,4 @@
-<addon id="script.thapps.filemote" version="0.1.0" name="FileMote" provider-name="idealkooks">
+<addon id="script.thapps.filemote" version="1.21.0" name="FileMote" provider-name="idealkooks">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
     </requires>
